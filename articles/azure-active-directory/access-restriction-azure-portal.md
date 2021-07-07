@@ -78,13 +78,13 @@ Azure AD のグローバル管理者（グローバル管理者または制限�
     Connect-MsolService
     ```
 
-2. 下記コマンドで他のユーザー及びグループの情報を取得させないように設定します。
+2. 下記コマンドで他のユーザーの情報を取得させないように設定します。
 
     ```powershell 
     Set-MsolCompanySettings -UsersPermissionToReadOtherUsersEnabled $false
     ```
 
-3. 下記コマンドで他のユーザー及びグループの情報を取得させないように設定されたか確認します。
+3. 下記コマンドで他のユーザーの情報を取得させないように設定されたか確認します。
 
     ```powershell
     Get-MsolCompanyInformation | fl UsersPermissionToReadOtherUsersEnabled
